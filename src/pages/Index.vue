@@ -22,7 +22,6 @@
     <Tabl 
       v-if="rows.length > 0"
       :rows="rows"
-      @delete="deleteRow($event)"
     />
 
     <div v-else class="warning danger">
@@ -48,7 +47,6 @@ export default {
   methods: {
     removeData () { this.$store.dispatch('removeRows') },
     resetData () { this.$store.dispatch('resetRows') },
-    // deleteRow(index)
   }
 }
 </script>

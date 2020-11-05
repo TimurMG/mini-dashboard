@@ -28,19 +28,8 @@
 
 <script>
 export default {
-  model: {
-    prop: 'value',
-    event: 'change'
-  },
-
   props: {
     rows: {
-      type: Array,
-      default: () => {
-        return []
-      }
-    },
-    value: {
       type: Array,
       default: () => {
         return []
@@ -48,23 +37,9 @@ export default {
     }
   },
 
-  data: () => ({
-    checkall: false
-  }),
-
   computed: {
-    modelValue: {
-      get () {
-        return this.value;
-      },
-      set (val) {
-        this.$emit('change', val);
-      }
-    },
     curComponent () { return () => import(`@/components/tabl/TablRow.vue`) },
-  },
-
-  methods: {}
+  }
 }
 </script>
 
@@ -149,7 +124,9 @@ export default {
       }
     }
     &.active {
-      color: $primary;
+      .has-child > & { 
+        color: $primary; 
+      }
       & svg {
         transform: rotate(90deg);
         transition: .2s;

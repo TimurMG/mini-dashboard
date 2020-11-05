@@ -26,7 +26,7 @@
             <use xlink:href="@/assets/img/sprite.svg#edit"></use>
           </svg>
         </button>
-        <button class="btn min delete">
+        <button class="btn min delete" @click="deleteRow">
           <svg class="ic20 icred">
             <use xlink:href="@/assets/img/sprite.svg#delete"></use>
           </svg>
@@ -76,7 +76,8 @@ export default {
       if (arr.length > 0) res = res + this.countSumm(arr)
       else res = res + this.item.count
       return res
-    }
+    },
+    rows () { return [ ...this.$store.getters.rows ] }
   },
 
   methods: {
@@ -88,7 +89,29 @@ export default {
         else res = res + element.count
       }
       return res
-    }
+    },
+
+    deleteRow () {
+      const arr = [ ...this.rows ]
+      this.deleteAction(arr)
+      this.$store.commit('setRows', arr)
+    },
+
+    deleteAction (arr) {
+      const index = arr.findIndex(item => item.id === this.item.id)
+      if (index !== -1) {
+        arr.splice(index, 1)
+      }
+      else {
+        for (let i = 0; i < arr.length; i++) {
+          const element = arr[i]
+          if (element.children.length > 0) {
+            this.deleteAction(element.children)
+          }
+        }
+      }
+    },
+
   }
 }
 </script>
