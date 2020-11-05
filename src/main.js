@@ -2,16 +2,16 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router/'
 import store from './store/'
-import getUid from 'get-uid'
+import vClickOutside from 'v-click-outside'
 
 // Global style
 import '@/assets/css/main.scss'
 
+Vue.use(vClickOutside)
 Vue.config.productionTip = false
 
 new Vue({
   router,
   store,
-  getUid,
   render: h => h(App),
 }).$mount('#app')

@@ -7,7 +7,10 @@
         Название
       </span>
       <span class="tabl-cell">
-        Кол-во
+        Фактическое кол-во
+      </span>
+      <span class="tabl-cell">
+        Общее кол-во
       </span>
       <span class="tabl-cell">
         Действия
@@ -19,7 +22,6 @@
       v-for="(row, i) of rows"
       :is="curComponent"
       :key="'row__'+i"
-      :index="i"
       :item="row"
     />
 
@@ -66,6 +68,7 @@ export default {
     border-top: $border-1;
     border-bottom: $border-1;
     margin: 0 0 -1px;
+    position: relative;
 
     &:hover { background-color: #F0F4FD; }
     &:active { background-color: #e5eeff; }

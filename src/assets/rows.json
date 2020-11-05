@@ -2,12 +2,12 @@
   {
     "id": 10,
     "name": "Алматы",
-    "count": 0,
+    "count": 150,
     "children": [
       {
         "id": 13,
         "name": "Управление 1",
-        "count": 0,
+        "count": 10,
         "children": [
           {
             "id": 15,
@@ -18,7 +18,7 @@
           {
             "id": 16,
             "name": "Отдел 2",
-            "count": 15,
+            "count": 1,
             "children": [
               {
                 "id": 17,
@@ -39,7 +39,7 @@
       {
         "id": 19,
         "name": "Управление 2",
-        "count": 0,
+        "count": 1,
         "children": [
           {
             "id": 20,

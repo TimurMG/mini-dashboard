@@ -3,10 +3,10 @@
     <div class="container flex aic jcsb hfull">
       <nav class="head-menu flex">
         <router-link to="/" class="head-menu-item flex aic jcc">Дизайн 1</router-link>
-        <router-link to="/test" class="head-menu-item flex aic jcc">Дизайн 2</router-link>
+        <router-link to="/second" class="head-menu-item flex aic jcc">Дизайн 2</router-link>
       </nav>
 
-      <button class="head-add btn white">
+      <button class="head-add btn white" @click="$emit('add')">
         <svg class="ic20 icwhite mr1">
           <use xlink:href="@/assets/img/sprite.svg#plus"></use>
         </svg>

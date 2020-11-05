@@ -16,5 +16,11 @@ export default new Router({
       name: 'main',
       component: () => import('@/pages/Index.vue')
     },
+    
+    {
+      path: '/second',
+      name: 'second',
+      component: () => import('@/pages/Second.vue')
+    },
   ]
 })
