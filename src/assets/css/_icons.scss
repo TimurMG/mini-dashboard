@@ -1,0 +1,16 @@
+// Icons
+.ic {
+
+  // Size
+  @for $i from 10 through 30 {
+    &#{1 * $i} {  width: 0.1rem * $i; height: 0.1rem * $i; }
+  }
+
+  // Color
+  &white { fill: #FFF; }
+  &black { fill: #000; }
+  &primary { fill: $primary; }
+  &yellow { fill: $yellow; }
+  &red { fill: $red; }
+
+}

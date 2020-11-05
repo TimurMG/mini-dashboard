@@ -1,0 +1,127 @@
+[
+  {
+    "name": "Алматы",
+    "count": 0,
+    "children": [
+      {
+        "name": "Управление 1",
+        "count": 0,
+        "children": [
+          {
+            "name": "Отдел 1",
+            "count": 25,
+            "children": []
+          },
+          {
+            "name": "Отдел 2",
+            "count": 15,
+            "children": [
+              {
+                "name": "Суб суб Отдел 1",
+                "count": 3,
+                "children": []
+              },
+              {
+                "name": "Еще один отдел",
+                "count": 21,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Управление 2",
+        "count": 0,
+        "children": [
+          {
+            "name": "Отдел 1",
+            "count": 35,
+            "children": []
+          },
+          {
+            "name": "Отдел 2",
+            "count": 25,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Уральск",
+    "count": 100,
+    "children": [
+      {
+        "name": "Управление 1",
+        "count": 50,
+        "children": [
+          {
+            "name": "Отдел 1",
+            "count": 25,
+            "children": []
+          },
+          {
+            "name": "Отдел 2",
+            "count": 25,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Управление 2",
+        "count": 50,
+        "children": [
+          {
+            "name": "Отдел 1",
+            "count": 25,
+            "children": []
+          },
+          {
+            "name": "Отдел 2",
+            "count": 25,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Петропавловск",
+    "count": 100,
+    "children": [
+      {
+        "name": "Управление 1",
+        "count": 50,
+        "children": [
+          {
+            "name": "Отдел 1",
+            "count": 25,
+            "children": []
+          },
+          {
+            "name": "Отдел 2",
+            "count": 25,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Управление 2",
+        "count": 50,
+        "children": [
+          {
+            "name": "Отдел 1",
+            "count": 25,
+            "children": []
+          },
+          {
+            "name": "Отдел 2",
+            "count": 25,
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

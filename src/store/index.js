@@ -14,7 +14,25 @@ export default new Vuex.Store({
     },
   },
 
-  actions: {},
+  actions: {
+    getRows ({ commit }) {
+      if (localStorage.getItem('rows')) {
+        try {
+          const rows = JSON.parse(localStorage.getItem('rows'))
+          commit('setRows', rows)
+        } catch {
+          localStorage.removeItem('rows')
+        }
+      }
+    },
+    resetRows ({ commit }) {
+      const rows = require('@/assets/rows.json')
+      commit('setRows', rows)
+    },
+    removeRows ({ commit }) {
+      commit('setRows', [])
+    },
+  },
 
   getters: {
     rows: s => s.rows

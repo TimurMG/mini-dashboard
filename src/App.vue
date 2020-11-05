@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <!-- <transition name="fade">
-      <PageLoading v-if="isLoad" />
-    </transition> -->
+    <transition name="fade"><PageLoading v-if="isLoad" /></transition>
     <HeadPage />
     <router-view @load="isLoad = $event" />
   </div>
@@ -13,9 +11,9 @@ import HeadPage from './components/page/HeadPage'
 
 export default {
   name: 'App',
-  components: { HeadPage }
+  components: { HeadPage },
+  data: () => ({
+    isLoad: false
+  })
 }
 </script>
-
-<style>
-</style>
